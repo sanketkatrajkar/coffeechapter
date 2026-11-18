@@ -411,7 +411,7 @@ function Menu() {
         <div className="menu-page-banner">
           <span className="menu-chip">Freshly Crafted</span>
           <h1>Restaurant Menu</h1>
-          <p>All prices are in Indian Rupees</p>
+          <p>All prices are Indian Rupees</p>
         </div>
 
         <div className="menu-tools">
