@@ -4,27 +4,27 @@ import './CafeStorySection.css'
 
 const storyVideos = [
   {
-    src: '/Videos/video_2026-11-12_14-19-15.mp4',
+    src: `${import.meta.env.BASE_URL}Videos/video_2026-11-12_14-19-15.mp4`,
     title: 'Mango Chilli, Poured Fresh',
   },
   {
-    src: '/Videos/video_2026-11-12_14-19-20.mp4',
+    src: `${import.meta.env.BASE_URL}Videos/video_2026-11-12_14-19-20.mp4`,
     title: 'A Tool Behind the Bar',
   },
   {
-    src: '/Videos/video_2026-11-12_14-19-27.mp4',
+    src: `${import.meta.env.BASE_URL}Videos/video_2026-11-12_14-19-27.mp4`,
     title: 'A Peek at the Menu',
   },
   {
-    src: '/Videos/video_2026-11-12_14-19-32.mp4',
+    src: `${import.meta.env.BASE_URL}Videos/video_2026-11-12_14-19-32.mp4`,
     title: 'Behind the Coffee Counter',
   },
   {
-    src: '/Videos/video_2026-11-12_14-19-39.mp4',
+    src: `${import.meta.env.BASE_URL}Videos/video_2026-11-12_14-19-39.mp4`,
     title: 'Come for the Coffee',
   },
   {
-    src: '/Videos/video_2026-11-12_14-19-44.mp4',
+    src: `${import.meta.env.BASE_URL}Videos/video_2026-11-12_14-19-44.mp4`,
     title: 'A Barista at Work',
   },
 ]
