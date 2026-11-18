@@ -40,6 +40,24 @@ const fromPattern = /^whatsapp:\+[1-9]\d{7,14}$/
 const distDirectory = resolve(fileURLToPath(new URL('../dist/', import.meta.url)))
 
 app.disable('x-powered-by')
+
+const allowedOrigin = 'https://sanketkatrajkar.github.io'
+app.use((request, response, next) => {
+  if (request.get('Origin') === allowedOrigin) {
+    response.setHeader('Access-Control-Allow-Origin', allowedOrigin)
+    response.vary('Origin')
+  }
+
+  if (request.method === 'OPTIONS') {
+    response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+    response.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+    response.sendStatus(204)
+    return
+  }
+
+  next()
+})
+
 app.use(express.json({ limit: '10kb' }))
 app.use('/api/', apiLimiter)
 
