@@ -1,0 +1,172 @@
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 0 4.8%;
+  background: #fff0dc;
+  box-shadow: 0 3px 14px rgba(73, 37, 19, 0.04);
+}
+
+.navbar {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border-bottom: 1px solid rgba(166, 91, 49, 0.18);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 17px;
+  flex-shrink: 0;
+  color: #48220f;
+}
+
+.brand-mark {
+  width: 61px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-right: 1px solid rgba(166, 91, 49, 0.17);
+  padding-right: 16px;
+}
+
+.brand-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(21px, 2.25vw, 32px);
+  font-weight: 600;
+  letter-spacing: -1.2px;
+  white-space: nowrap;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 4vw, 58px);
+}
+
+.nav-link {
+  position: relative;
+  padding: 15px 0;
+  color: #462312;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  background: #b84f29;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.reserve-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 47px;
+  padding: 0 21px;
+  border-radius: 30px;
+  background: #814727;
+  color: #fff8ef;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.reserve-button:hover {
+  background: #a44e2c;
+  transform: translateY(-2px);
+}
+
+.mobile-menu-button,
+.mobile-nav {
+  display: none;
+}
+
+/* Tablet and Mobile */
+
+@media (max-width: 800px) {
+
+  .site-header {
+    padding: 0 5%;
+  }
+
+  .navbar {
+    min-height: 68px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-mark {
+    width: 43px;
+    height: 44px;
+    padding-right: 9px;
+  }
+
+  .brand-mark svg {
+    width: 30px;
+  }
+
+  .brand-name {
+    font-size: clamp(19px, 4vw, 26px);
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: grid;
+    place-items: center;
+    border: 0;
+    background: transparent;
+    color: #4a2513;
+    cursor: pointer;
+  }
+
+  .mobile-menu-button:focus-visible,
+  .nav-link:focus-visible,
+  .brand:focus-visible,
+  .reserve-button:focus-visible,
+  .mobile-nav a:focus-visible {
+    outline: 2px solid #b84f29;
+    outline-offset: 4px;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 0 18px;
+  }
+
+  .mobile-nav > a:not(.reserve-button) {
+    padding: 12px 4px;
+    color: #462312;
+    font-weight: 600;
+  }
+
+  .mobile-nav .reserve-button {
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+}

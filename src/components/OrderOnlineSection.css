@@ -1,0 +1,210 @@
+.order-online-section {
+  padding-top: clamp(55px, 7vw, 88px);
+  padding-bottom: clamp(55px, 7vw, 88px);
+  background: #fffaf3;
+}
+
+.order-online-card {
+  display: grid;
+  max-width: 1190px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+  margin: 0 auto;
+  padding: clamp(30px, 4.5vw, 56px);
+  border-radius: 22px;
+  color: #fff8ef;
+  background:
+    radial-gradient(ellipse at 82% 45%, rgb(218 167 119 / 22%), transparent 38%),
+    radial-gradient(ellipse at 8% 0%, rgb(203 95 72 / 19%), transparent 35%),
+    #4b2b1d;
+}
+
+.order-online-eyebrow {
+  margin-bottom: 12px;
+  color: #e4b18b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.order-online-copy h2 {
+  color: #fff8ef;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(36px, 4.5vw, 58px);
+  font-weight: 600;
+  letter-spacing: -1.7px;
+  line-height: 1.12;
+}
+
+.order-online-subtitle {
+  max-width: 470px;
+  margin-top: 16px;
+  color: #e2d2c3;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.order-online-actions {
+  max-width: 410px;
+  margin-top: 26px;
+}
+
+.order-online-partners {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.order-partner {
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 350ms ease, box-shadow 350ms ease, filter 350ms ease;
+}
+
+.order-partner:hover {
+  color: #fff;
+  box-shadow: 0 9px 22px rgb(23 12 7 / 22%);
+  filter: brightness(1.06);
+  transform: translateY(-3px);
+}
+
+.order-partner--zomato {
+  background: #cb202d;
+}
+
+.order-partner--swiggy {
+  background: #e66c1c;
+}
+
+.order-partner--unavailable {
+  cursor: not-allowed;
+  opacity: 0.84;
+}
+
+.order-partner-mark {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  place-items: center;
+  font-size: 18px;
+}
+
+.order-online-note {
+  margin-top: 12px;
+  color: #d3bca9;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.order-online-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  animation: rider-float 6s ease-in-out infinite;
+}
+
+.order-online-visual::before {
+  position: absolute;
+  width: 77%;
+  aspect-ratio: 1;
+  border: 1px solid rgb(255 248 239 / 12%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(227 186 147 / 14%), rgb(227 186 147 / 3%) 62%, transparent 70%);
+  content: '';
+}
+
+.order-online-visual img {
+  position: relative;
+  display: block;
+  width: min(100%, 520px);
+  height: auto;
+  filter: drop-shadow(0 18px 20px rgb(23 12 7 / 24%));
+  transition: transform 350ms ease, filter 350ms ease;
+}
+
+.order-online-visual:hover img {
+  filter: drop-shadow(0 23px 24px rgb(23 12 7 / 29%));
+  transform: scale(1.035);
+}
+
+@keyframes rider-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 800px) {
+  .order-online-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .order-online-visual img {
+    width: min(100%, 460px);
+  }
+}
+
+@media (max-width: 520px) {
+  .order-online-section {
+    padding-top: 45px;
+    padding-bottom: 52px;
+  }
+
+  .order-online-card {
+    gap: 23px;
+    padding: 29px 22px;
+    border-radius: 16px;
+  }
+
+  .order-online-copy h2 {
+    font-size: clamp(35px, 10vw, 46px);
+  }
+
+  .order-online-subtitle {
+    font-size: 14px;
+  }
+
+  .order-online-actions {
+    margin-top: 22px;
+  }
+
+  .order-partner {
+    min-height: 54px;
+  }
+
+  .order-online-visual img {
+    width: min(100%, 380px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .order-partner {
+    transition: none;
+  }
+
+  .order-online-visual {
+    animation: none;
+  }
+
+  .order-online-visual img {
+    transition: none;
+  }
+}
