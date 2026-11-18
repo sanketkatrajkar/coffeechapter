@@ -81,14 +81,14 @@ function Hero() {
 
           <div className="coffee-photo">
             <img
-              src="/photos/HeroSectionfirst.jpg"
+              src={`${import.meta.env.BASE_URL}photos/HeroSectionfirst.jpg`}
               alt="The Coffee Chapter cafe entrance"
             />
           </div>
 
           <div className="iced-photo">
             <img
-              src="/photos/HeroSectionsecond.jpg"
+              src={`${import.meta.env.BASE_URL}photos/HeroSectionsecond.jpg`}
               alt="A cup of coffee with latte art"
             />
           </div>

@@ -58,7 +58,7 @@ function OrderOnlineSection() {
         </div>
         <div className="order-online-visual">
           <img
-            src="/photos/delivery-rider.svg"
+            src={`${import.meta.env.BASE_URL}photos/delivery-rider.svg`}
             alt="Delivery rider on a red scooter with a coffee delivery box"
             width="760"
             height="620"
