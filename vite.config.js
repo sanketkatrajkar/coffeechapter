@@ -2,11 +2,12 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
 
-  // Required for GitHub Pages
-  base: '/thecoffeechapter/',
+  // GitHub Pages: /coffeechapter/
+  // Vercel: /
+  base: mode === 'github' ? '/coffeechapter/' : '/',
 
   // Local development API proxy
   server: {
@@ -14,4 +15,4 @@ export default defineConfig({
       '/api': 'http://localhost:3001',
     },
   },
-})
+}))

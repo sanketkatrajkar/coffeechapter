@@ -9,6 +9,7 @@
     "dev:web": "vite",
     "start": "node server/index.js",
     "build": "vite build",
+    "build:github": "vite build --mode github",
     "lint": "oxlint",
     "preview": "vite preview",
     "test:server": "node --test server/*.test.js"
